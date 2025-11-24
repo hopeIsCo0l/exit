@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => {
         allowedHosts: [
           '.railway.app',
           '.up.railway.app',
+          'anutest-production.up.railway.app',
           'localhost',
           '127.0.0.1'
         ],
