@@ -39,7 +39,59 @@ A comprehensive platform for Ethiopian university students to practice exit exam
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## Deploy to Railway
+## Deploy to Vercel
+
+Vercel is the easiest way to deploy this app. It automatically detects Vite projects and handles everything for you.
+
+### Option 1: Deploy via Vercel Dashboard (Recommended)
+
+1. **Sign up/Login to Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Sign up with your GitHub account (it's free!)
+
+2. **Import your repository:**
+   - Click "Add New..." → "Project"
+   - Import the `hopeIsCo0l/exit` repository
+   - Vercel will auto-detect it's a Vite project
+
+3. **Configure Environment Variables:**
+   - In the project settings, go to "Environment Variables"
+   - Add: `GEMINI_API_KEY` with your API key value
+   - Select "Production", "Preview", and "Development" environments
+
+4. **Deploy:**
+   - Click "Deploy"
+   - Vercel will automatically:
+     - Install dependencies
+     - Run `npm run build`
+     - Deploy your app
+   - You'll get a URL like `your-app.vercel.app`
+
+### Option 2: Deploy via Vercel CLI
+
+1. **Install Vercel CLI:**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy:**
+   ```bash
+   vercel
+   ```
+
+3. **Set environment variables:**
+   ```bash
+   vercel env add GEMINI_API_KEY
+   ```
+
+4. **Deploy to production:**
+   ```bash
+   vercel --prod
+   ```
+
+### Railway Deployment (Alternative)
+
+If you prefer Railway:
 
 1. **Connect your GitHub repository to Railway:**
    - Go to [Railway](https://railway.app)
