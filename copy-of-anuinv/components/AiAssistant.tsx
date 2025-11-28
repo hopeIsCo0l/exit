@@ -39,27 +39,26 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({ inventory, transaction
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 h-[calc(100vh-8rem)]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-8rem)]">
       {/* Insights Panel */}
-      <div className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-        <div className="p-4 sm:p-6 border-b border-gray-100 bg-gradient-to-r from-candy-50 to-purple-50">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
-                <h2 className="text-lg sm:text-xl font-bold text-gray-800 flex items-center gap-2">
-                    <Sparkles className="text-candy-500" size={18} />
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-candy-50 to-purple-50">
+            <div className="flex justify-between items-center">
+                <h2 className="text-xl font-bold text-gray-800 flex items-center gap-2">
+                    <Sparkles className="text-candy-500" size={20}/>
                     Factory Insights
                 </h2>
                 <button 
                     onClick={handleAnalyze}
                     disabled={loadingAnalysis}
-                    className="flex items-center gap-2 px-3 py-1.5 bg-white text-candy-600 rounded-lg text-xs sm:text-sm font-medium shadow-sm hover:bg-candy-50 disabled:opacity-50 w-full sm:w-auto"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-white text-candy-600 rounded-lg text-sm font-medium shadow-sm hover:bg-candy-50 disabled:opacity-50"
                 >
                     <RefreshCw size={14} className={loadingAnalysis ? "animate-spin" : ""} />
-                    <span className="hidden sm:inline">{loadingAnalysis ? 'Analyzing...' : 'Refresh Analysis'}</span>
-                    <span className="sm:hidden">{loadingAnalysis ? 'Analyzing...' : 'Refresh'}</span>
+                    {loadingAnalysis ? 'Analyzing...' : 'Refresh Analysis'}
                 </button>
             </div>
         </div>
-        <div className="p-4 sm:p-6 overflow-y-auto flex-1">
+        <div className="p-6 overflow-y-auto flex-1">
             {analysis ? (
                 <div className="prose prose-sm prose-candy max-w-none text-gray-600">
                     <div className="whitespace-pre-line leading-relaxed">{analysis}</div>
@@ -74,13 +73,13 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({ inventory, transaction
       </div>
 
       {/* Chat Panel */}
-      <div className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-200 flex flex-col overflow-hidden">
-         <div className="p-3 sm:p-4 border-b border-gray-100 bg-gray-50 flex items-center gap-2">
-            <Bot className="text-gray-500" size={18} />
-            <h3 className="font-semibold text-sm sm:text-base text-gray-700">Assistant</h3>
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 flex flex-col overflow-hidden">
+         <div className="p-4 border-b border-gray-100 bg-gray-50 flex items-center gap-2">
+            <Bot className="text-gray-500" size={20} />
+            <h3 className="font-semibold text-gray-700">Assistant</h3>
          </div>
          
-         <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50/50">
+         <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50/50">
             {chatHistory.length === 0 && (
                 <div className="text-center text-xs text-gray-400 mt-10">
                     Ask me anything about your candy inventory!
@@ -88,7 +87,7 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({ inventory, transaction
             )}
             {chatHistory.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`max-w-[85%] sm:max-w-[80%] rounded-xl sm:rounded-2xl px-3 sm:px-4 py-2 text-xs sm:text-sm shadow-sm ${
+                    <div className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm shadow-sm ${
                         msg.role === 'user' 
                         ? 'bg-candy-500 text-white rounded-br-none' 
                         : 'bg-white text-gray-700 border border-gray-200 rounded-bl-none'
@@ -106,21 +105,21 @@ export const AiAssistant: React.FC<AiAssistantProps> = ({ inventory, transaction
             )}
          </div>
 
-         <div className="p-3 sm:p-4 bg-white border-t border-gray-100">
+         <div className="p-4 bg-white border-t border-gray-100">
             <form onSubmit={handleChat} className="flex gap-2">
                 <input 
                     type="text"
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
                     placeholder="Type a question..."
-                    className="flex-1 px-3 sm:px-4 py-2 text-sm border border-gray-200 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-candy-300"
+                    className="flex-1 px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-candy-300"
                 />
                 <button 
                     type="submit"
                     disabled={chatLoading || !chatInput.trim()}
-                    className="p-2 bg-candy-500 text-white rounded-lg sm:rounded-xl hover:bg-candy-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="p-2 bg-candy-500 text-white rounded-xl hover:bg-candy-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                    <Send size={18} />
+                    <Send size={20} />
                 </button>
             </form>
          </div>

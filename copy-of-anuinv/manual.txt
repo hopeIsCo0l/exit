@@ -13,7 +13,7 @@ operations.
 The application runs locally on your computer at http://127.0.0.1:3000 (localhost).
 
 ================================================================================
-                            MAIN FEATURES
+                           MAIN FEATURES                          
 ================================================================================
 
 1. DASHBOARD
@@ -67,11 +67,11 @@ The application runs locally on your computer at http://127.0.0.1:3000 (localhos
    - Container (units)
    
    Finished Products:
-   - (Type 1) - Gummy Bears
-   - (Type 2) - Lollipops
-   - (Type 3) - Soda Pops
-   - (Type 4) - Hard Candy
-   - (Type 5) - Super Sour
+   - Hilwit - Gummy Bears
+   - Daru - Lollipops
+   - (Product C) - Soda Pops
+   - (Product D) - Hard Candy
+   - (Product E) - Super Sour
 
 3. PRODUCTION MANAGEMENT
    ----------------------
@@ -124,11 +124,11 @@ The application runs locally on your computer at http://127.0.0.1:3000 (localhos
    - Processing time
    
    Example Recipes:
-   - Type 1: Sugar (0.5kg) + Glucose (0.2L) + Plastic Bag (1 unit) - 45 min
-   - Type 2: Sugar (0.3kg) + Glucose (0.1L) + Sticks (10) + Bag (1) - 30 min
-   - Type 3: Sugar (0.2kg) + Plastic Bottle (1) - 60 min
-   - Type 4: Sugar (1.0kg) + Karton Box (1) - 90 min
-   - Type 5: Sugar (0.8kg) + Glucose (0.5L) + Container (1) - 120 min
+   - Hilwit: Sugar (0.5kg) + Glucose (0.2L) + Plastic Bag (1 unit) - 45 min
+   - Daru: Sugar (0.3kg) + Glucose (0.1L) + Sticks (10) + Bag (1) - 30 min
+   - Product C: Sugar (0.2kg) + Plastic Bottle (1) - 60 min
+   - Product D: Sugar (1.0kg) + Karton Box (1) - 90 min
+   - Product E: Sugar (0.8kg) + Glucose (0.5L) + Container (1) - 120 min
 
 4. TRANSACTION HISTORY
    --------------------
@@ -208,7 +208,7 @@ RAW MATERIALS vs. PRODUCTS
 ---------------------------
 - Raw Materials: Ingredients and packaging used to make candy (e.g., Sugar, 
   Glucose, Plastic Bags)
-- Products: Finished candy items ready for sale (e.g., Type 1, Type 2)
+- Products: Finished candy items ready for sale (e.g., Hilwit, Daru)
 
 MINIMUM STOCK LEVELS
 --------------------
@@ -250,7 +250,7 @@ EXAMPLE 1: RESTOCKING RAW MATERIALS
 EXAMPLE 2: PRODUCING CANDY
 ---------------------------
 1. Navigate to Production section
-2. Select a product (e.g., "Type 1")
+2. Select a product (e.g., "Hilwit")
 3. Adjust batch size slider (e.g., 50 units)
 4. Review cost analysis and ingredient availability
 5. Ensure all ingredients show green checkmarks

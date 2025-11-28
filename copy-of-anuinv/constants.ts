@@ -13,16 +13,16 @@ export const INITIAL_INVENTORY: InventoryItem[] = [
   { id: 'rm_cont', name: 'Container', category: ItemCategory.RAW_MATERIAL, quantity: 100, unit: Unit.UNIT, minStock: 20, costPerUnit: 5.0 },
 
   // Products (costPerUnit here represents Selling Price or Standard Cost)
-  { id: 'p_type1', name: '(Type 1)', category: ItemCategory.PRODUCT, quantity: 50, unit: Unit.UNIT, minStock: 20, costPerUnit: 15 },
-  { id: 'p_type2', name: '(Type 2)', category: ItemCategory.PRODUCT, quantity: 100, unit: Unit.UNIT, minStock: 50, costPerUnit: 10 },
-  { id: 'p_type3', name: '(Type 3)', category: ItemCategory.PRODUCT, quantity: 20, unit: Unit.UNIT, minStock: 10, costPerUnit: 12 },
-  { id: 'p_type4', name: '(Type 4)', category: ItemCategory.PRODUCT, quantity: 0, unit: Unit.UNIT, minStock: 15, costPerUnit: 8 },
-  { id: 'p_type5', name: '(Type 5)', category: ItemCategory.PRODUCT, quantity: 5, unit: Unit.UNIT, minStock: 10, costPerUnit: 20 },
+  { id: 'p_productA', name: 'Hilwit', category: ItemCategory.PRODUCT, quantity: 50, unit: Unit.UNIT, minStock: 20, costPerUnit: 15 },
+  { id: 'p_productB', name: 'Daru', category: ItemCategory.PRODUCT, quantity: 100, unit: Unit.UNIT, minStock: 50, costPerUnit: 10 },
+  { id: 'p_productC', name: '(Product C)', category: ItemCategory.PRODUCT, quantity: 20, unit: Unit.UNIT, minStock: 10, costPerUnit: 12 },
+  { id: 'p_productD', name: '(Product D)', category: ItemCategory.PRODUCT, quantity: 0, unit: Unit.UNIT, minStock: 15, costPerUnit: 8 },
+  { id: 'p_productE', name: '(Product E)', category: ItemCategory.PRODUCT, quantity: 5, unit: Unit.UNIT, minStock: 10, costPerUnit: 20 },
 ];
 
 export const RECIPES: Recipe[] = [
   {
-    productId: 'p_type1', // Gummy Bears
+    productId: 'p_productA', // Gummy Bears
     processTimeMinutes: 45,
     ingredients: [
       { rawMaterialId: 'rm_sugar', quantity: 0.5 },
@@ -31,7 +31,7 @@ export const RECIPES: Recipe[] = [
     ]
   },
   {
-    productId: 'p_type2', // Lollipops
+    productId: 'p_productB', // Lollipops
     processTimeMinutes: 30,
     ingredients: [
       { rawMaterialId: 'rm_sugar', quantity: 0.3 },
@@ -41,7 +41,7 @@ export const RECIPES: Recipe[] = [
     ]
   },
   {
-    productId: 'p_type3', // Soda Pops
+    productId: 'p_productC', // Soda Pops
     processTimeMinutes: 60,
     ingredients: [
       { rawMaterialId: 'rm_sugar', quantity: 0.2 },
@@ -49,7 +49,7 @@ export const RECIPES: Recipe[] = [
     ]
   },
   {
-    productId: 'p_type4', // Hard Candy
+    productId: 'p_productD', // Hard Candy
     processTimeMinutes: 90,
     ingredients: [
       { rawMaterialId: 'rm_sugar', quantity: 1.0 },
@@ -57,7 +57,7 @@ export const RECIPES: Recipe[] = [
     ]
   },
   {
-    productId: 'p_type5', // Super Sour
+    productId: 'p_productE', // Super Sour
     processTimeMinutes: 120,
     ingredients: [
       { rawMaterialId: 'rm_sugar', quantity: 0.8 },

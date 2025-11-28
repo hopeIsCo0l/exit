@@ -6,8 +6,8 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd(), '');
     return {
       server: {
-        port: 3000,
-        host: '0.0.0.0',
+        port: 5173, // Use Vite's default port to avoid permission issues
+        host: '127.0.0.1', // Use IPv4 explicitly
       },
       preview: {
         port: process.env.PORT ? parseInt(process.env.PORT) : 3000,

@@ -22,7 +22,7 @@ export interface InventoryItem {
 
 export interface Recipe {
   productId: string;
-  processTimeMinutes: number; // Added for workflow visualization
+  processTimeMinutes: number; 
   ingredients: {
     rawMaterialId: string;
     quantity: number;
@@ -37,6 +37,7 @@ export interface Transaction {
   amount?: number;
   batchId?: string;
   cost?: number;
+  performedBy?: string; // Added to track who did what
 }
 
 export type BatchStatus = 'QUEUED' | 'PROCESSING' | 'COMPLETED';
@@ -50,8 +51,12 @@ export interface Batch {
   status: BatchStatus;
 }
 
-export interface Alert {
+export type UserRole = 'ADMIN' | 'FACTORY_MANAGER';
+
+export interface User {
   id: string;
-  message: string;
-  severity: 'low' | 'medium' | 'high';
+  name: string;
+  email: string;
+  role: UserRole;
+  avatar?: string;
 }
